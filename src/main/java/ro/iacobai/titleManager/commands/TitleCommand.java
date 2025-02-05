@@ -1,28 +1,28 @@
-package ro.iacobai.titleManager;
+package ro.iacobai.titleManager.commands;
 
 import net.kyori.adventure.text.format.NamedTextColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
-import ro.iacobai.titleManager.Gui.Inventory;
+import ro.iacobai.titleManager.gui.MainMenu;
 
 public class TitleCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        // check if the sender is a player
+        // Check if the sender is a player
         if (!(sender instanceof Player)) {
             sender.sendMessage(NamedTextColor.RED + "Only players can use this command!");
             return true;
         }
 
-        // cast the sender to a player
+        // Cast the sender to a player
         Player player = (Player) sender;
 
-        // open the title gui
-        player.openInventory(new Inventory(player).getInventory());
-
+        // Open the title GUI for the player
+        MainMenu mainMenu = new MainMenu(player);
+        mainMenu.open();
         return true;
     }
 }

@@ -1,20 +1,20 @@
-package ro.iacobai.titleManager;
+package ro.iacobai.titleManager.models;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class TitleHandler {
-    // the singleton instance of the class
+    // Singleton instance of the class
     private static TitleHandler instance;
 
-    // we create a set of titles
+    // Set to store all registered titles
     private final Set<Title> titles = new HashSet<>();
 
-    // we create a private constructor so the class can't be instantiated
+    // Private constructor to prevent instantiation
     private TitleHandler() {
     }
 
-    // we create a static method to get the instance of the class
+    // Method to get the singleton instance of the class
     public static TitleHandler getInstance() {
         if (instance == null) {
             instance = new TitleHandler();
@@ -22,12 +22,12 @@ public class TitleHandler {
         return instance;
     }
 
-    // we create a method to register a title
+    // Method to register a new title
     public void registerTitle(Title title) {
         titles.add(title);
     }
 
-    // we create a method to get all the titles
+    // Method to retrieve all registered titles
     public Set<Title> getTitles() {
         return titles;
     }
