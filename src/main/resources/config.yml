@@ -1,0 +1,11 @@
+titles:
+  boss:
+    title: "&cBOSS"
+    description:
+      - "&cYou are the boss!"
+      - "&cYes you are"
+  player:
+    title: "&aPLAYER"
+    description:
+      - "&aYou are a player!"
+      - "&aYes you are noob"

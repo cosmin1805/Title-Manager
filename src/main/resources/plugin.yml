@@ -1,0 +1,17 @@
+name: TitleManager
+version: '1.0-SNAPSHOT'
+main: ro.iacobai.titleManager.TitleManager
+api-version: '1.21'
+commands:
+    titlemanager:
+        description: Open the titles menu, where you can manage your titles.
+        usage: /titlemanager
+        aliases: [titles]
+dependencies:
+    server:
+        PlaceholderAPI:
+            load: BEFORE
+            required: true
+        UltraPermissions:
+            load: BEFORE
+            required: true
