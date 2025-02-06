@@ -67,8 +67,9 @@ public class MenuHandler implements Listener {
         String placeholder = changingPrefix ? "%uperms_prefix%" : "%uperms_suffix%";
         String currentTitle = PlaceholderAPI.setPlaceholders(player, placeholder);
 
+        // Check if the player already has the title, if so just set the title to none
         if (currentTitle.toLowerCase().contains(title.getName().toLowerCase())) {
-            return;
+            title = new Title("none", null, null, "none");
         }
 
         // Choose the correct command based on changingPrefix
