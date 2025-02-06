@@ -1,5 +1,5 @@
 name: TitleManager
-version: '1.2-SNAPSHOT'
+version: 'v1.1.1'
 main: ro.iacobai.titleManager.TitleManager
 api-version: '1.21'
 commands:
@@ -15,3 +15,7 @@ dependencies:
         UltraPermissions:
             load: BEFORE
             required: true
+permissions:
+    titlemanager.use:
+        description: "Allows the player to use the title manager."
+        default: op
