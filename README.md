@@ -1,7 +1,7 @@
 # Title Manager
 
-[![Wiki](https://img.shields.io/badge/wiki-Title%20Manager%20Wiki-blue)](https://github.com/cosmin1805/TitleManager/wiki)
-[![Releases](https://img.shields.io/github/v/release/cosmin1805/TitleManager)](https://github.com/cosmin1805/TitleManager/releases)
+[![Wiki](https://img.shields.io/badge/wiki-Title%20Manager%20Wiki-blue)](https://github.com/cosmin1805/Title-Manager/wiki)
+[![Releases](https://img.shields.io/github/v/release/cosmin1805/Title-Manager)](https://github.com/cosmin1805/Title-Manager/releases)
 
 Title Manager is a Minecraft plugin that allows players to manage their titles, prefixes, and suffixes easily through an in-game GUI. Titles can be both a suffix or a prefix. The plugin is designed for Paper 1.21 and has not been tested on other versions.
 
