@@ -61,5 +61,6 @@ jobs:
           token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}  # Use fine-grained token
           tag_name: ${{ github.ref_name }}
           files: build/release/*.jar  # Attach the correct JAR to the release
+          make_latest: true  # Automatically mark as the latest release
         env:
           GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
