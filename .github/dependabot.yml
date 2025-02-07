@@ -1,0 +1,22 @@
+version: 2
+updates:
+  - package-ecosystem: "gradle"
+    directory: "/" # Change if build.gradle.kts or build.gradle is in a subfolder
+    schedule:
+      interval: "weekly" # Change to "daily" or "monthly" if needed
+    open-pull-requests-limit: 5
+    commit-message:
+      prefix: "deps"
+      include: "scope"
+    groups:
+      gradle-dependencies:
+        patterns:
+          - "*"
+        update-types:
+          - "minor"
+          - "patch"
+    ignore:
+      - dependency-name: "org.jetbrains.kotlin:kotlin-stdlib"
+        versions: ["1.x"] # Example: Ignore Kotlin stdlib updates
+    allow:
+      - dependency-type: "direct" # Only update direct dependencies
