@@ -3,11 +3,12 @@
 [![Wiki](https://img.shields.io/badge/wiki-Title%20Manager%20Wiki-blue)](https://github.com/cosmin1805/Title-Manager/wiki)
 [![Releases](https://img.shields.io/github/v/release/cosmin1805/Title-Manager)](https://github.com/cosmin1805/Title-Manager/releases)
 
-Title Manager is a Minecraft plugin that allows players to manage their titles, prefixes, and suffixes easily through an in-game GUI. Titles can be both a suffix or a prefix. The plugin is designed for Paper 1.21 and has not been tested on other versions.
+Title Manager is a Minecraft plugin that allows players to manage their titles, prefixes, and suffixes easily through an in-game GUI. Titles can be both a suffix or a prefix. The plugin is designed for Paper 1.21 and has not been tested on other versions. For now, it only works with the specified dependencies.
 
 ## Table of Contents
 
 - [Features](#features)
+- [Demonstration](#demonstration)
 - [Commands](#commands)
 - [Permissions](#permissions)
 - [Installation](#installation)
@@ -23,6 +24,15 @@ Title Manager is a Minecraft plugin that allows players to manage their titles, 
 - User-friendly GUI
 - Integration with PlaceholderAPI and UltraPermissions
 
+## Demonstration
+<details>
+  <summary>📌 Click to Show Demonstration (GIFs)</summary>
+
+![Title Manager GUI](assets/TittleManager-1.gif)  
+![Title Selection](assets/TittleManager-2.gif)
+
+</details>
+
 ## Commands
 
 - `/titlemanager` - Open the titles menu, where you can manage your titles.
@@ -34,7 +44,7 @@ Title Manager is a Minecraft plugin that allows players to manage their titles, 
 
 ## Installation
 
-1. Download the latest release of Title Manager from the [releases page](https://github.com/cosmin1805/TitleManager/releases).
+1. Download the latest release of Title Manager from the [releases page](https://github.com/cosmin1805/Title-Manager/releases).
 2. Place the downloaded `.jar` file in your server's `plugins` directory.
 3. Restart your server to load the plugin.
 
