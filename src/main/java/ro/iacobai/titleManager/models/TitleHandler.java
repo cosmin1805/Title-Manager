@@ -1,5 +1,7 @@
 package ro.iacobai.titleManager.models;
 
+import ro.iacobai.titleManager.TitleManager;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -30,5 +32,15 @@ public class TitleHandler {
     // Method to retrieve all registered titles
     public Set<Title> getTitles() {
         return titles;
+    }
+
+    // Method to clear all the registered titles, so we can reload them
+    public void clearTitles() {
+        // Before clearing the titles, we should also remove the permissions from the server
+        for (Title title : titles) {
+            TitleManager.getInstance().getServer().getPluginManager().removePermission(title.getPermission());
+        }
+
+        titles.clear();
     }
 }

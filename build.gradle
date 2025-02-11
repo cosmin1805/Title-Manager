@@ -71,11 +71,11 @@ tasks.jar {
 tasks.register('reloadServer') {
     doLast {
         exec {
-            commandLine 'screen', '-S', 'mc-server', '-p', '0', '-X', 'stuff', 'reload\n'
+            commandLine 'screen', '-S', minecraftScreenName, '-p', '0', '-X', 'stuff', 'reload\n'
         }
         Thread.sleep(1000) // Wait 1 second before confirming
         exec {
-            commandLine 'screen', '-S', 'mc-server', '-p', '0', '-X', 'stuff', 'reload confirm\n'
+            commandLine 'screen', '-S', minecraftScreenName, '-p', '0', '-X', 'stuff', 'reload confirm\n'
         }
     }
 }

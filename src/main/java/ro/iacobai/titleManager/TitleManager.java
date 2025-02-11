@@ -2,6 +2,7 @@ package ro.iacobai.titleManager;
 
 import org.bukkit.plugin.java.JavaPlugin;
 import ro.iacobai.titleManager.commands.TitleCommand;
+import ro.iacobai.titleManager.commands.TitleCommandCompleter;
 import ro.iacobai.titleManager.events.MenuHandler;
 import ro.iacobai.titleManager.handler.ConfigHandler;
 
@@ -24,6 +25,7 @@ public final class TitleManager extends JavaPlugin {
 
         // Register the command executor for "titlemanager"
         getCommand("titlemanager").setExecutor(new TitleCommand());
+        getCommand("titlemanager").setTabCompleter(new TitleCommandCompleter());
 
         // Register event listeners
         getServer().getPluginManager().registerEvents(new MenuHandler(), this);

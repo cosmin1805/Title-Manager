@@ -42,4 +42,10 @@ public class ConfigHandler {
             TitleHandler.getInstance().registerTitle(new Title(key, perm, description, title));
         }
     }
+
+    public static void reloadTitles() {
+        TitleHandler.getInstance().clearTitles(); // Clear the titles
+        TitleManager.getInstance().reloadConfig(); // Reload the config
+        loadTittles(); // Load the titles
+    }
 }
