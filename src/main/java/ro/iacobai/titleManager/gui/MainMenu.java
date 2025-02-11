@@ -88,7 +88,11 @@ public class MainMenu implements InventoryHolder {
             currentTitle = PlaceholderAPI.setPlaceholders(player, "%uperms_suffix%");
         }
 
-        if (currentTitle.toLowerCase().contains(title.getName().toLowerCase())) {
+        // Strip the color codes from the current title and the title to compare them
+        String strippedTitle = currentTitle.replaceAll("[§&][0-9a-fA-F]", "").toLowerCase();
+        String strippedCurrentTitle = title.getTitle().replaceAll("[§&][0-9a-fA-F]", "").toLowerCase();
+
+        if (currentTitle.equalsIgnoreCase(title.getTitle()) || strippedTitle.equalsIgnoreCase(strippedCurrentTitle)) {
             meta.addEnchant(org.bukkit.enchantments.Enchantment.MENDING, 1, true);
             meta.addItemFlags(org.bukkit.inventory.ItemFlag.HIDE_ENCHANTS);
             lore.add(Component.text("(Currently Selected)", NamedTextColor.GREEN));

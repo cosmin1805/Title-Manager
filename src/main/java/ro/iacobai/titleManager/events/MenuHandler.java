@@ -67,8 +67,12 @@ public class MenuHandler implements Listener {
         String placeholder = changingPrefix ? "%uperms_prefix%" : "%uperms_suffix%";
         String currentTitle = PlaceholderAPI.setPlaceholders(player, placeholder);
 
+        // Strip the color codes from the current title and the title to compare them
+        String strippedTitle = currentTitle.replaceAll("[§&][0-9a-fA-F]", "").toLowerCase();
+        String strippedCurrentTitle = title.getTitle().replaceAll("[§&][0-9a-fA-F]", "").toLowerCase();
+
         // Check if the player already has the title, if so just set the title to none
-        if (currentTitle.toLowerCase().contains(title.getName().toLowerCase())) {
+        if (currentTitle.equalsIgnoreCase(title.getTitle()) || strippedTitle.equalsIgnoreCase(strippedCurrentTitle)) {
             title = new Title("none", null, null, "none");
         }
 
